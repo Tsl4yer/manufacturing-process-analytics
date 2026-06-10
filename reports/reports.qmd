@@ -1,0 +1,63 @@
+---
+title: "Manufacturing Process Analytics"
+subtitle: "Stage 1 of 3 — Data-Driven Engineering Portfolio"
+author: "Shikhar Sinha | Mechanical Engineering"
+date: today
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-title: "Contents"
+    code-fold: true
+    embed-resources: true
+    fig-width: 10
+    fig-height: 6
+  pdf:
+    documentclass: article
+    geometry: margin=1in
+execute:
+  echo: true
+  warning: false
+---
+
+## Executive Summary
+
+> This project analyzes 10,000 machine operation cycles from the AI4I 2020
+> Predictive Maintenance dataset to identify the root causes of equipment failure.
+> Using statistical analysis and feature engineering, **Rotational Speed (RPM)**, 
+> **Tool Wear**, and **Mechanical Power** were identified as the dominant failure drivers,
+> accounting for **80%** of all failures. Failure rate escalates from **2.09%**
+> in fresh tools to **15.5%** in the critical wear zone.
+
+## Problem Statement
+
+Manufacturing downtime costs industrial facilities an estimated $50 billion
+annually in the US alone. Identifying which process parameters precede
+equipment failure is the first step toward predictive maintenance strategies
+that reduce unplanned downtime.
+
+**Research question:** Which measurable process variables most strongly
+precede machine failure, and can we quantify a threshold beyond which
+failure risk escalates significantly?
+
+## Dataset
+
+| Property | Value |
+|----------|-------|
+| Source   | UCI ML Repository — AI4I 2020 (ID: 601) |
+| Rows     | 10,000 machine cycles |
+| Features | 14 (5 sensor + 1 categorical + 5 failure modes + 1 ID) |
+| Failure rate | ~3.39% |
+| Failure modes | TWF, HDF, PWF, OSF, RNF |
+
+## Key Findings
+
+1. **Overstrain** was elevated by **70.6%** in failed runs vs. normal runs (p < 0.001)
+2. Failure rate escalates from **2.09%** (High Grade/Fresh wear) to **15.5%** (Critical wear)  
+3. Low-quality (L) grade products fail at **1.88×** the rate of High-quality (H) products (3.92% vs 2.09%)
+
+## Recommendations
+
+1. Implement a tool wear alert threshold at **204.5** minutes to prevent critical overstrain triggers.
+2. Alarm on rotational speeds dropping below a threshold of **1386.5 RPM** under heavy operation.
+3. Prioritize preventive maintenance for L-grade product runs, given their higher statistical baseline risk.
