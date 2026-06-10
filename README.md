@@ -1,7 +1,7 @@
 # Manufacturing Process Analytics
 > Stage 1 of the "Data-Driven Engineering & Decision Making" portfolio.
 
-[![View Report](https://img.shields.io/badge/View-Live_HTML_Report-blue)](https://tsl4yer.github.io/manufacturing-process-analytics/notebooks/analysis.html)
+[![View Report](https://img.shields.io/badge/View-Live_HTML_Report-blue)](https://tsl4yer.github.io/manufacturing-process-analytics/reports/reports.html)
 [![Python](https://img.shields.io/badge/Python-3.9+-yellow)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green)](#)
 
